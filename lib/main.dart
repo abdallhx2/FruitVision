@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruitvision/screens/welcome/welcome_screen.dart';
+import 'package:fruitvision/route.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,9 +10,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: WelcomeScreen(),
+    return MaterialApp.router(
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
       ),
     );
   }
