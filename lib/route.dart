@@ -1,8 +1,8 @@
+import 'package:fruitvision/screens/auth/login_screen.dart';
 import 'package:fruitvision/screens/auth/register_screen.dart';
+import 'package:fruitvision/screens/auth/verification_screen.dart';
 import 'package:fruitvision/screens/welcome/body.dart';
 import 'package:go_router/go_router.dart';
-
-
 
 final GoRouter router = GoRouter(
   initialLocation: '/',
@@ -16,15 +16,20 @@ final GoRouter router = GoRouter(
     //   name: 'home',
     //   builder: (context, state) => const HomeScreen(),
     // ),
-    // GoRoute(
-    //   path: '/login',
-    //   name: 'login',
-    //   builder: (context, state) => const LoginScreen(),
-    // ),
+    GoRoute(
+      path: '/signin',
+      name: 'signin',
+      builder: (context, state) => const SignInScreen(),
+    ),
     GoRoute(
       path: '/signup',
       name: 'signup',
       builder: (context, state) => const SignUpScreen(),
+    ),
+    GoRoute(
+      path: '/verification',
+      name: 'verification',
+      builder: (context, state) => const VerificationScreen(),
     ),
   ],
 );

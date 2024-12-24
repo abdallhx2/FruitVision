@@ -53,7 +53,7 @@ class WelcomePage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => context.push('/signin'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFFD32F2F),
                       padding: const EdgeInsets.symmetric(vertical: 16),

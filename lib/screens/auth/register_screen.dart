@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruitvision/constants/app_colors.dart';
+import 'package:go_router/go_router.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -20,10 +22,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Logo
-              Image.asset(
-                'assets/images/logo.png',
-                height: 150,
+              Align(
+                alignment: Alignment.topCenter,
+                child: Transform.scale(
+                  scale: 3.0,
+                  child: Transform.translate(
+                    offset: const Offset(0, -50),
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      height: 150,
+                    ),
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
 
@@ -33,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF2E7D32),
+                  color: AppColors.primaryDark,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -133,19 +143,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // TODO: Implement social login buttons
                   IconButton(
-                    icon: Image.asset('assets/apple_icon.png', width: 24),
-                    onPressed: () {
-                      // TODO: Implement Apple login
-                    },
+                    icon: Image.asset('assets/icons/apple.png', width: 24),
+                    onPressed: () {},
                   ),
                   const SizedBox(width: 20),
                   IconButton(
-                    icon: Image.asset('assets/google_icon.png', width: 24),
-                    onPressed: () {
-                      // TODO: Implement Google login
-                    },
+                    icon: Image.asset('assets/icons/google.png', width: 24),
+                    onPressed: () {},
                   ),
                 ],
               ),
@@ -153,11 +158,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
               // Create Account Button
               ElevatedButton(
-                onPressed: () {
-                  // TODO: Implement account creation logic
-                },
+                onPressed: () => context.push('/signin'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFC62828),
+                  backgroundColor: AppColors.accent,
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),

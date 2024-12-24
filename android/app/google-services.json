@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "101703164229",
+    "project_id": "fruitvision-5193a",
+    "storage_bucket": "fruitvision-5193a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101703164229:android:83fe59914145d7991fde2c",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALtaKJ2yt481yza2SZHwu_mKjHkJcV2w8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
